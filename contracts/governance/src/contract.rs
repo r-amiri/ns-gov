@@ -146,3 +146,14 @@ pub fn handle_unsubscribe<S: Storage, A: Api, Q: Querier>(
     };
     Ok(res)
 }
+
+pub fn query<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+    msg: QueryMsg,
+) -> StdResult<Binary> {
+    match msg {
+        QueryMsg::PaidAmountIs { address } => to_binary(&try_paidamountis(deps, address)),
+        QueryMsg::GetNameServiceAddress {} => to_binary(&get_nameservice_address(deps)),
+        QueryMsg::AddressExists { address } => to_binary(&address_exists(deps, address)),
+    }
+}
