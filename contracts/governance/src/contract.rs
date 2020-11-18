@@ -175,3 +175,12 @@ pub fn try_paidamountis<S: Storage, A: Api, Q: Querier>(
     let paid_amount = payments_read(&deps.storage, address)?;
     Ok(paid_amount)
 }
+
+pub fn get_nameservice_address<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+) -> StdResult<HumanAddr> {
+    Ok(owner_cfg_read(&deps.storage)
+        .load()
+        .unwrap()
+        .name_service_address)
+}
