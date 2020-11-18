@@ -45,3 +45,37 @@ pub fn handle<S: Storage, A: Api, Q: Querier>(
         HandleMsg::TestPurposes {} => test_purposes(),
     }
 }
+
+pub fn test_purposes() -> StdResult<HandleResponse> {
+    Ok(Default::default())
+}
+
+pub fn try_register<S: Storage, A: Api, Q: Querier>(
+    deps: &mut Extern<S, A, Q>,
+    env: Env,
+    name_c: Name,
+) -> StdResult<HandleResponse> {
+    if env.message.sender
+        != nsowner_read(&deps.storage)
+        .load()
+        .unwrap()
+        .nameservice_owner
+    {
+        return Err(StdError::generic_err("Access not granted."));
+    }
+    let mut found = false;
+    let names_iter = names_read(&deps.storage).load()?.names_vector;
+    for val in names_iter {
+        if val.value == name_c.value {
+            found = true;
+            break;
+        }
+    }
+    if !found {
+        names_store(&mut deps.storage).update(|mut names_s| {
+            names_s.names_vector.push(name_c);
+            Ok(names_s)
+        })?;
+    }
+    Ok(HandleResponse::default())
+}
