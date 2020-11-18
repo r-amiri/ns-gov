@@ -1,0 +1,13 @@
+/Users/rita/my-second-contract/target/debug/deps/quote-2e4ca34c836e1be7.rmeta: /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/lib.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ext.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/format.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ident_fragment.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/to_tokens.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/runtime.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/spanned.rs
+
+/Users/rita/my-second-contract/target/debug/deps/libquote-2e4ca34c836e1be7.rlib: /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/lib.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ext.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/format.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ident_fragment.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/to_tokens.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/runtime.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/spanned.rs
+
+/Users/rita/my-second-contract/target/debug/deps/quote-2e4ca34c836e1be7.d: /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/lib.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ext.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/format.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ident_fragment.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/to_tokens.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/runtime.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/spanned.rs
+
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/lib.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ext.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/format.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/ident_fragment.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/to_tokens.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/runtime.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.7/src/spanned.rs:

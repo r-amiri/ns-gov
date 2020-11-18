@@ -1,0 +1,1 @@
+/Users/rita/my-second-contract/target/debug/libname_service.dylib: /Users/rita/my-second-contract/contracts/name_service/src/contract.rs /Users/rita/my-second-contract/contracts/name_service/src/lib.rs /Users/rita/my-second-contract/contracts/name_service/src/msg.rs /Users/rita/my-second-contract/contracts/name_service/src/state.rs

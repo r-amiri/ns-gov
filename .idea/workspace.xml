@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/contracts/name_service/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/contracts/governance/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d31b4763-4171-4495-ae40-8bac77f558d3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="cmxn3p63" />
+  </component>
+  <component name="ProjectId" id="1jo5YQ6UFFirpfE2zANH3aRoJcd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/my-second-contract/contracts/governance/src/contract.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/my-second-contract/contracts/governance/src/msg.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/my-second-contract/contracts/governance/src/state.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/my-second-contract/contracts/name_service/src/contract.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/my-second-contract/contracts/name_service/src/msg.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/my-second-contract/contracts/name_service/src/state.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/governance/src/contract.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/governance/src/lib.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/governance/src/msg.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/name_service/src/contract.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/name_service/src/lib.rs" value="true" />
+    <property name="org.rust.hideToolchainNotifications" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/contracts/governance" />
+      <recent name="$PROJECT_DIR$/contracts/name_service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/contracts/name_service" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$PROJECT_DIR$/../.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d31b4763-4171-4495-ae40-8bac77f558d3" name="Default Changelist" comment="" />
+      <created>1604457650658</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604457650658</updated>
+      <workItem from="1604457651670" duration="908000" />
+      <workItem from="1604458573781" duration="1952000" />
+      <workItem from="1604466949084" duration="33951000" />
+      <workItem from="1604626686588" duration="24788000" />
+      <workItem from="1604886230921" duration="2920000" />
+      <workItem from="1604902307642" duration="1443000" />
+      <workItem from="1604921086644" duration="19719000" />
+      <workItem from="1605078230898" duration="100000" />
+      <workItem from="1605080535803" duration="46310000" />
+      <workItem from="1605235937105" duration="24167000" />
+      <workItem from="1605430995559" duration="855000" />
+      <workItem from="1605431861145" duration="169000" />
+      <workItem from="1605432053139" duration="332000" />
+      <workItem from="1605432395369" duration="36000" />
+      <workItem from="1605432681500" duration="6645000" />
+      <workItem from="1605491621803" duration="3244000" />
+      <workItem from="1605494979255" duration="400000" />
+      <workItem from="1605495408724" duration="54801000" />
+      <workItem from="1605664736892" duration="2838000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="270" y="-901" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605432213663">
+      <screen x="-433" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="656" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog/-390.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1605089648280" />
+    <state x="656" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog/-390.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605238518478" />
+    <state x="270" y="-901" key="#com.intellij.execution.impl.EditConfigurationsDialog/-433.-1080.1920.1080/0.0.1792.1120@-433.-1080.1920.1080" timestamp="1605432213663" />
+    <state x="656" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog/-528.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605252801394" />
+    <state x="570" y="340" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604458355704">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="570" y="340" key="#com.intellij.fileTypes.FileTypeChooser/-229.-1417.2560.1417/0.23.1792.1017@0.23.1792.1017" timestamp="1604458355704" />
+    <state x="100" y="123" width="1592" height="817" key="DiffContextDialog" timestamp="1604458251527">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="100" y="123" width="1592" height="817" key="DiffContextDialog/-229.-1417.2560.1417/0.23.1792.1017@0.23.1792.1017" timestamp="1604458251527" />
+    <state x="405" y="164" key="SettingsEditor" timestamp="1605494522523">
+      <screen x="0" y="25" width="1792" height="1006" />
+    </state>
+    <state x="405" y="164" key="SettingsEditor/-145.-1415.2560.1415/0.25.1792.1006@0.25.1792.1006" timestamp="1605494522523" />
+    <state x="764" y="25" width="1539" height="862" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605513203948">
+      <screen x="0" y="25" width="1792" height="1006" />
+    </state>
+    <state x="764" y="25" width="1539" height="862" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-145.-1415.2560.1415/0.25.1792.1006@0.25.1792.1006" timestamp="1605513203948" />
+    <state x="-159" y="-1339" width="2271" height="1212" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-229.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1604630571037" />
+    <state x="49" y="79" width="1590" height="867" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-535.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605256351910" />
+    <state x="100" y="123" width="1592" height="813" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1605256351910">
+      <screen x="0" y="23" width="1792" height="1013" />
+    </state>
+    <state x="100" y="123" width="1592" height="813" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/-535.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605256351910" />
+    <state x="0" y="23" width="685" height="687" key="dock-window-1" timestamp="1605246019633">
+      <screen x="0" y="23" width="1792" height="1013" />
+    </state>
+    <state x="867" y="-1359" width="1287" height="1192" key="dock-window-1/-229.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1604886916617" />
+    <state x="132" y="-1417" width="954" height="1240" key="dock-window-1/-390.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1605082494725" />
+    <state x="0" y="23" width="685" height="687" key="dock-window-1/-528.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605246019633" />
+    <state x="860" y="23" width="758" height="978" key="dock-window-1/0.23.1792.1012@0.23.1792.1012" timestamp="1604615857232" />
+    <state x="0" y="23" width="565" height="1013" key="dock-window-2" timestamp="1605246019634">
+      <screen x="0" y="23" width="1792" height="1013" />
+    </state>
+    <state x="-168" y="-1359" width="1287" height="1206" key="dock-window-2/-229.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1604886916618" />
+    <state x="0" y="23" width="859" height="1012" key="dock-window-2/-390.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1605177121275" />
+    <state x="-368" y="-958" width="1281" height="1012" key="dock-window-2/-390.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605236449286" />
+    <state x="0" y="23" width="565" height="1013" key="dock-window-2/-528.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605246019634" />
+    <state x="461" y="23" width="1016" height="1012" key="dock-window-2/0.23.1792.1012@0.23.1792.1012" timestamp="1605104388234" />
+    <state x="22" y="162" width="1281" height="1012" key="dock-window-2/0.23.1792.1013@0.23.1792.1013" timestamp="1605240666361" />
+    <state x="105" y="164" width="605" height="490" key="find.popup" timestamp="1605510030104">
+      <screen x="0" y="25" width="1792" height="1006" />
+    </state>
+    <state x="105" y="164" width="605" height="490" key="find.popup/-145.-1415.2560.1415/0.25.1792.1006@0.25.1792.1006" timestamp="1605510030104" />
+    <state x="725" y="427" width="604" height="490" key="find.popup/-390.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1605170668541" />
+    <state x="344" y="-649" width="648" height="524" key="find.popup/-433.-1080.1920.1080/0.0.1792.1120@-433.-1080.1920.1080" timestamp="1605431979908" />
+    <state x="725" y="427" width="604" height="491" key="find.popup/-528.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605239793203" />
+    <state x="561" y="242" key="run.anything.popup" timestamp="1605488900676">
+      <screen x="0" y="25" width="1792" height="1006" />
+    </state>
+    <state x="561" y="242" key="run.anything.popup/-145.-1415.2560.1415/0.25.1792.1006@0.25.1792.1006" timestamp="1605488900676" />
+    <state x="769" y="-833" width="718" height="706" key="search.everywhere.popup" timestamp="1605532432856">
+      <screen x="-433" y="-1055" width="1920" height="1055" />
+    </state>
+    <state x="1424" y="236" width="670" height="676" key="search.everywhere.popup/-229.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1604648763262" />
+    <state x="1122" y="236" width="670" height="676" key="search.everywhere.popup/-390.-1417.2560.1417/0.23.1792.1012@0.23.1792.1012" timestamp="1605158100677" />
+    <state x="1122" y="236" width="670" height="677" key="search.everywhere.popup/-390.-1417.2560.1417/0.23.1792.1013@0.23.1792.1013" timestamp="1605235194991" />
+    <state x="769" y="-833" width="718" height="706" key="search.everywhere.popup/-433.-1055.1920.1055/0.25.1792.1006@-433.-1055.1920.1055" timestamp="1605532432856" />
+  </component>
+</project>

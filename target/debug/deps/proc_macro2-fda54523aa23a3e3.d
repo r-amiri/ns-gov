@@ -1,0 +1,12 @@
+/Users/rita/my-second-contract/target/debug/deps/proc_macro2-fda54523aa23a3e3.rmeta: /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/lib.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/marker.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/parse.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/detection.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/fallback.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/wrapper.rs
+
+/Users/rita/my-second-contract/target/debug/deps/libproc_macro2-fda54523aa23a3e3.rlib: /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/lib.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/marker.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/parse.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/detection.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/fallback.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/wrapper.rs
+
+/Users/rita/my-second-contract/target/debug/deps/proc_macro2-fda54523aa23a3e3.d: /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/lib.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/marker.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/parse.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/detection.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/fallback.rs /Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/wrapper.rs
+
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/lib.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/marker.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/parse.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/detection.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/fallback.rs:
+/Users/rita/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.24/src/wrapper.rs:

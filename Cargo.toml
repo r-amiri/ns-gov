@@ -1,0 +1,7 @@
+[workspace]
+members=["contracts/governance", "contracts/name_service"]
+
+[profile.release]
+rpath = false
+lto = true
+overflow-checks = true
