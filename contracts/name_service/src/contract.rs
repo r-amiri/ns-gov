@@ -130,3 +130,18 @@ pub fn try_nameexists<S: Storage, A: Api, Q: Querier>(
     }
     Ok(found)
 }
+
+pub fn try_owneris<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+    value: String,
+) -> StdResult<HumanAddr> {
+    let mut def_h_a = HumanAddr::default();
+    let names_iter = names_read(&deps.storage).load()?.names_vector;
+    for val in names_iter {
+        if val.value == value {
+            def_h_a = deps.api.human_address(&val.owner).unwrap();
+            break;
+        }
+    }
+    Ok(def_h_a)
+}
