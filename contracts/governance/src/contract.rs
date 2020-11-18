@@ -167,3 +167,11 @@ pub fn address_exists<S: Storage, A: Api, Q: Querier>(
     }
     Ok(true)
 }
+
+pub fn try_paidamountis<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+    address: HumanAddr,
+) -> StdResult<Uint128> {
+    let paid_amount = payments_read(&deps.storage, address)?;
+    Ok(paid_amount)
+}
