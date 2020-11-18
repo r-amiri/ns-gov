@@ -238,4 +238,49 @@ mod tests {
         assert_eq!(res5_value.unwrap(), test_name);
     }
 
+    #[test]
+    fn proper_deregistration() {
+        let operator_address = HumanAddr::from("test1");
+        let test_name: String = "Test1Name".to_string();
+        let mut deps = mock_dependencies(20, &[]);
+        let env = mock_env(operator_address.clone(), &[]);
+        let msg1 = NSInitMsg {
+            hook: Some(InitHook {
+                contract_addr: env.clone().contract.address,
+                msg: to_binary(&TestPurposes {}).unwrap(),
+            }),
+        };
+        let _res1 = init(&mut deps, env.clone(), msg1);
+        let msg2 = Register {
+            name_c: Name {
+                value: test_name.clone(),
+                owner: deps
+                    .api
+                    .canonical_address(&operator_address.clone())
+                    .unwrap(),
+            },
+        };
+        let _res2 = handle(&mut deps, env.clone(), msg2);
+
+        let msg3 = Deregister {
+            name_c: Name {
+                value: test_name.clone(),
+                owner: deps
+                    .api
+                    .canonical_address(&operator_address.clone())
+                    .unwrap(),
+            },
+        };
+        let res3 = handle(&mut deps, env.clone(), msg3);
+        assert_eq!(&res3.is_err(), &false);
+        let res3_message = res3.unwrap().messages.len();
+        assert_eq!(res3_message, 0);
+
+        let msg3 = NameExists {
+            value: test_name.clone(),
+        };
+        let res3 = query(&deps, msg3).unwrap();
+        let res3_value: StdResult<bool> = from_binary(&res3).unwrap();
+        assert_eq!(false, res3_value.unwrap());
+    }
 }
