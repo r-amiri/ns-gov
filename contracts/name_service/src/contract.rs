@@ -29,3 +29,19 @@ pub fn init<S: Storage, A: Api, Q: Querier>(
     };
     Ok(response)
 }
+
+pub fn handle<S: Storage, A: Api, Q: Querier>(
+    deps: &mut Extern<S, A, Q>,
+    env: Env,
+    msg: HandleMsg,
+) -> StdResult<HandleResponse> {
+    match msg {
+        HandleMsg::Register {
+            name_c: name_component,
+        } => try_register(deps, env, name_component),
+        HandleMsg::Deregister {
+            name_c: name_component,
+        } => try_deregister(deps, env, name_component),
+        HandleMsg::TestPurposes {} => test_purposes(),
+    }
+}
