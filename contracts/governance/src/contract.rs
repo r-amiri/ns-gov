@@ -258,4 +258,63 @@ mod tests {
         let query2 = try_paidamountis(&deps, base_address).unwrap();
         assert_eq!(query2, Uint128(1000));
     }
+
+    #[test]
+    fn proper_unsubscription() {
+        let mut deps = mock_dependencies(20, &[]);
+        let sent = Coin::new(1000, LUNA);
+        let base_address = HumanAddr::from("test1");
+        let env = mock_env(base_address.clone(), &[sent]);
+
+        let msg1 = InitMsg {
+            nameservice_code_id: 16,
+        };
+        let _res1 = init(&mut deps, env.clone(), msg1);
+
+        let msg2 = Signup {};
+        let _res2 = handle(&mut deps, env.clone(), msg2);
+
+        let msg3 = Subscribe {
+            name: "Test1Name".to_string(),
+        };
+        let _res3 = handle(&mut deps, env.clone(), msg3);
+
+        let msg4 = Unsubscribe {
+            name: "Test1Name".to_string(),
+        };
+        let res4 = handle(&mut deps, env.clone(), msg4);
+        assert_eq!(&res4.is_err(), &false);
+        let res4_message = res4.unwrap().messages;
+        assert_eq!(res4_message.len(), 2); //a bank message and a deregister one
+
+        if res4_message.len() == 2 {
+            let mut intended_messages: Vec<CosmosMsg> = vec![];
+
+            let message1 = WasmMsg::Execute {
+                contract_addr: base_address.clone(),
+                msg: to_binary(&Deregister {
+                    name_c: Name {
+                        value: "Test1Name".to_string(),
+                        owner: deps.api.canonical_address(&base_address).unwrap(),
+                    },
+                })
+                    .unwrap(),
+                send: vec![],
+            }
+                .into();
+            intended_messages.push(message1);
+            let message2 = BankMsg::Send {
+                from_address: env.contract.address.clone(),
+                to_address: base_address.clone(),
+                amount: vec![coin(100, LUNA)],
+            }
+                .into();
+            intended_messages.push(message2);
+
+            assert_eq!(res4_message, intended_messages);
+        }
+
+        let query1 = address_exists(&deps, base_address).unwrap();
+        assert_eq!(query1, false);
+    }
 }
