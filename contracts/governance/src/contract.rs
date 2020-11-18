@@ -39,3 +39,15 @@ pub fn init<S: Storage, A: Api, Q: Querier>(
     };
     Ok(response)
 }
+
+pub fn handle<S: Storage, A: Api, Q: Querier>(
+    deps: &mut Extern<S, A, Q>,
+    env: Env,
+    msg: HandleMsg,
+) -> StdResult<HandleResponse> {
+    match msg {
+        HandleMsg::Subscribe { name } => handle_subscribe(deps, env, name),
+        HandleMsg::Unsubscribe { name } => handle_unsubscribe(deps, env, name),
+        HandleMsg::Signup {} => handle_signup(deps, env),
+    }
+}
