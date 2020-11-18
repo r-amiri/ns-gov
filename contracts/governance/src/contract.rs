@@ -100,3 +100,49 @@ pub fn handle_subscribe<S: Storage, A: Api, Q: Querier>(
 
     Ok(res)
 }
+
+pub fn handle_unsubscribe<S: Storage, A: Api, Q: Querier>(
+    deps: &mut Extern<S, A, Q>,
+    env: Env,
+    name: String,
+) -> StdResult<HandleResponse> {
+    let name_service_contract_address = owner_cfg_read(&deps.storage)
+        .load()
+        .unwrap()
+        .name_service_address;
+    let message = Deregister {
+        name_c: Name {
+            value: name,
+            owner: deps.api.canonical_address(&env.message.sender).unwrap(),
+        },
+    };
+
+    let exemessage = CosmosMsg::Wasm(WasmMsg::Execute {
+        contract_addr: name_service_contract_address,
+        msg: to_binary(&message).unwrap(),
+        send: vec![],
+    });
+    let mut msgs: Vec<CosmosMsg> = vec![];
+    msgs.push(exemessage);
+
+    let paid_amount = payments_read(&deps.storage, env.message.sender.clone()).unwrap();
+    if !paid_amount.is_zero() {
+        let coin = Coin::new(paid_amount.u128() / 10, LUNA);
+
+        msgs.push(
+            BankMsg::Send {
+                from_address: env.contract.address.clone(),
+                to_address: env.message.sender.clone(),
+                amount: vec![coin],
+            }
+                .into(),
+        );
+        payments_delete(&mut deps.storage, env.message.sender).expect("No payments to delete");
+    }
+    let res = HandleResponse {
+        messages: msgs,
+        log: vec![],
+        data: None,
+    };
+    Ok(res)
+}
