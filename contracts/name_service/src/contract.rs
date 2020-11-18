@@ -57,9 +57,9 @@ pub fn try_register<S: Storage, A: Api, Q: Querier>(
 ) -> StdResult<HandleResponse> {
     if env.message.sender
         != nsowner_read(&deps.storage)
-        .load()
-        .unwrap()
-        .nameservice_owner
+            .load()
+            .unwrap()
+            .nameservice_owner
     {
         return Err(StdError::generic_err("Access not granted."));
     }
@@ -87,9 +87,9 @@ pub fn try_deregister<S: Storage, A: Api, Q: Querier>(
 ) -> StdResult<HandleResponse> {
     if env.message.sender
         != nsowner_read(&deps.storage)
-        .load()
-        .unwrap()
-        .nameservice_owner
+            .load()
+            .unwrap()
+            .nameservice_owner
     {
         return Err(StdError::generic_err("Access not granted"));
     }

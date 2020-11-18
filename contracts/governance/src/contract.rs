@@ -135,7 +135,7 @@ pub fn handle_unsubscribe<S: Storage, A: Api, Q: Querier>(
                 to_address: env.message.sender.clone(),
                 amount: vec![coin],
             }
-                .into(),
+            .into(),
         );
         payments_delete(&mut deps.storage, env.message.sender).expect("No payments to delete");
     }
@@ -245,10 +245,10 @@ mod tests {
                         owner: deps.api.canonical_address(&base_address).unwrap(),
                     },
                 })
-                    .unwrap(),
+                .unwrap(),
                 send: vec![],
             })
-                .into()];
+            .into()];
             assert_eq!(intended_message, res3_message);
         }
 
@@ -298,17 +298,17 @@ mod tests {
                         owner: deps.api.canonical_address(&base_address).unwrap(),
                     },
                 })
-                    .unwrap(),
+                .unwrap(),
                 send: vec![],
             }
-                .into();
+            .into();
             intended_messages.push(message1);
             let message2 = BankMsg::Send {
                 from_address: env.contract.address.clone(),
                 to_address: base_address.clone(),
                 amount: vec![coin(100, LUNA)],
             }
-                .into();
+            .into();
             intended_messages.push(message2);
 
             assert_eq!(res4_message, intended_messages);
