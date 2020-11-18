@@ -79,3 +79,28 @@ pub fn try_register<S: Storage, A: Api, Q: Querier>(
     }
     Ok(HandleResponse::default())
 }
+
+pub fn try_deregister<S: Storage, A: Api, Q: Querier>(
+    deps: &mut Extern<S, A, Q>,
+    env: Env,
+    name_component: Name,
+) -> StdResult<HandleResponse> {
+    if env.message.sender
+        != nsowner_read(&deps.storage)
+        .load()
+        .unwrap()
+        .nameservice_owner
+    {
+        return Err(StdError::generic_err("Access not granted"));
+    }
+    let names_iter = names_read(&deps.storage).load()?.names_vector;
+    for (index, val) in names_iter.into_iter().enumerate() {
+        if val == name_component {
+            names_store(&mut deps.storage).update(|mut names_s| {
+                names_s.names_vector.remove(index);
+                Ok(names_s)
+            })?;
+        }
+    }
+    Ok(HandleResponse::default())
+}
