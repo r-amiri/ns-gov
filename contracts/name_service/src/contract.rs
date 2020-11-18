@@ -145,3 +145,18 @@ pub fn try_owneris<S: Storage, A: Api, Q: Querier>(
     }
     Ok(def_h_a)
 }
+
+pub fn try_valueis<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+    owner: HumanAddr,
+) -> StdResult<String> {
+    let mut def_v = String::default();
+    let names_iter = names_read(&deps.storage).load()?.names_vector;
+    for val in names_iter {
+        if val.owner == deps.api.canonical_address(&owner)? {
+            def_v = val.value;
+            break;
+        }
+    }
+    Ok(def_v)
+}
