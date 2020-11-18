@@ -61,3 +61,42 @@ pub fn handle_signup<S: Storage, A: Api, Q: Querier>(
     owner_cfg_store(&mut deps.storage).save(&config)?;
     Ok(Default::default())
 }
+
+pub fn handle_subscribe<S: Storage, A: Api, Q: Querier>(
+    deps: &mut Extern<S, A, Q>,
+    env: Env,
+    name: String,
+) -> StdResult<HandleResponse> {
+    let sent_value = env.message.sent_funds.get(0);
+    if sent_value.is_none()
+        || sent_value.unwrap().denom != LUNA
+        || sent_value.unwrap().amount <= Uint128::zero()
+    {
+        return Err(StdError::generic_err("No sent value found."));
+    }
+    let sent_amount = sent_value.unwrap().amount;
+
+    payments_store(&mut deps.storage, env.message.sender.clone(), sent_amount).unwrap();
+    let adr = owner_cfg_read(&deps.storage)
+        .load()
+        .unwrap()
+        .name_service_address;
+    let msg = Register {
+        name_c: Name {
+            value: name,
+            owner: deps.api.canonical_address(&env.message.sender)?,
+        },
+    };
+    let message = CosmosMsg::Wasm(WasmMsg::Execute {
+        contract_addr: adr,
+        msg: to_binary(&msg)?,
+        send: vec![],
+    });
+    let res = HandleResponse {
+        messages: vec![message],
+        log: vec![],
+        data: None,
+    };
+
+    Ok(res)
+}
