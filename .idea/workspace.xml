@@ -56,6 +56,7 @@
     <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/governance/src/msg.rs" value="true" />
     <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/name_service/src/contract.rs" value="true" />
     <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/my-second-contract/contracts/name_service/src/lib.rs" value="true" />
+    <property name="org.rust.disableDetachedFileInspection/Users/rita/workspace/ns-gov/contracts/name_service/src/contract.rs" value="true" />
     <property name="org.rust.hideToolchainNotifications" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>

@@ -1,0 +1,2 @@
+917b3403286912f0f3678ebe6a4a19ed34b5a86462ecbf732cafe175cc1194d1  governance.wasm
+d422da506731a8ee8fe109c90e37a46e5dbfdd69c42f193f05d9fefd271f465b  name_service.wasm
