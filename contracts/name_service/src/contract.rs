@@ -160,3 +160,31 @@ pub fn try_valueis<S: Storage, A: Api, Q: Querier>(
     }
     Ok(def_v)
 }
+
+#[cfg(tests)]
+mod tests {
+    use super::*;
+    use crate::msg::HandleMsg::{Deregister, Register, TestPurposes};
+    use crate::msg::InitHook;
+    use crate::msg::QueryMsg::{NameExists, OwnerIs, ValueIs};
+    use cosmwasm_std::from_binary;
+    use cosmwasm_std::testing::{mock_dependencies, mock_env};
+
+    #[test]
+    fn proper_initialization() {
+        let operator_address = HumanAddr::from("test1");
+        let mut deps = mock_dependencies(20, &[]);
+        let env = mock_env(operator_address.clone(), &[]);
+
+        let msg1 = NSInitMsg {
+            hook: Some(InitHook {
+                contract_addr: env.clone().contract.address,
+                msg: to_binary(&TestPurposes {}).unwrap(),
+            }),
+        };
+        let res1 = init(&mut deps, env.clone(), msg1);
+        assert_eq!(&res1.is_err(), &false);
+        let res1_message = res1.unwrap().messages.len();
+        assert_eq!(res1_message, 1);
+    }
+}
