@@ -104,3 +104,14 @@ pub fn try_deregister<S: Storage, A: Api, Q: Querier>(
     }
     Ok(HandleResponse::default())
 }
+
+pub fn query<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+    msg: QueryMsg,
+) -> StdResult<Binary> {
+    match msg {
+        QueryMsg::NameExists { value } => to_binary(&try_nameexists(deps, value)),
+        QueryMsg::OwnerIs { value } => to_binary(&try_owneris(deps, value)?),
+        QueryMsg::ValueIs { owner } => to_binary(&try_valueis(deps, owner)?),
+    }
+}
