@@ -51,3 +51,13 @@ pub fn handle<S: Storage, A: Api, Q: Querier>(
         HandleMsg::Signup {} => handle_signup(deps, env),
     }
 }
+
+pub fn handle_signup<S: Storage, A: Api, Q: Querier>(
+    deps: &mut Extern<S, A, Q>,
+    env: Env,
+) -> StdResult<HandleResponse> {
+    let mut config = owner_cfg_read(&deps.storage).load().unwrap();
+    config.name_service_address = env.message.sender;
+    owner_cfg_store(&mut deps.storage).save(&config)?;
+    Ok(Default::default())
+}
