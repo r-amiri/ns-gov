@@ -161,7 +161,7 @@ pub fn try_valueis<S: Storage, A: Api, Q: Querier>(
     Ok(def_v)
 }
 
-#[cfg(tests)]
+#[cfg(test)]
 mod tests {
     use super::*;
     use crate::msg::HandleMsg::{Deregister, Register, TestPurposes};

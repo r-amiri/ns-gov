@@ -185,7 +185,7 @@ pub fn get_nameservice_address<S: Storage, A: Api, Q: Querier>(
         .name_service_address)
 }
 
-#[cfg(tests)]
+#[cfg(test)]
 mod tests {
     use super::*;
     use crate::msg::HandleMsg::{Subscribe, Unsubscribe};
