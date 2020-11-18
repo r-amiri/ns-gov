@@ -184,3 +184,32 @@ pub fn get_nameservice_address<S: Storage, A: Api, Q: Querier>(
         .unwrap()
         .name_service_address)
 }
+
+#[cfg(tests)]
+mod tests {
+    use super::*;
+    use crate::msg::HandleMsg::{Subscribe, Unsubscribe};
+    use cosmwasm_std::coin;
+    use cosmwasm_std::testing::{mock_dependencies, mock_env};
+
+    #[test]
+    fn proper_initialization() {
+        let mut deps = mock_dependencies(20, &[]);
+        let sent = Coin::new(1000, LUNA);
+        let base_address = HumanAddr::from("test1");
+        let env = mock_env(base_address.clone(), &[sent]);
+
+        let msg1 = InitMsg {
+            nameservice_code_id: 16,
+        };
+        let res1 = init(&mut deps, env.clone(), msg1);
+        assert_eq!(&res1.is_err(), &false);
+        let res1_message = res1.unwrap().messages.len();
+        assert_eq!(res1_message, 1);
+
+        let msg2 = Signup {};
+        let _res2 = handle(&mut deps, env, msg2);
+        let query = get_nameservice_address(&deps).unwrap();
+        assert_eq!(query, base_address);
+    }
+}
