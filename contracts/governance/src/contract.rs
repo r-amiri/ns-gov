@@ -157,3 +157,13 @@ pub fn query<S: Storage, A: Api, Q: Querier>(
         QueryMsg::AddressExists { address } => to_binary(&address_exists(deps, address)),
     }
 }
+
+pub fn address_exists<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+    address: HumanAddr,
+) -> StdResult<bool> {
+    if payments_read(&deps.storage, address).is_err() {
+        return Ok(false);
+    }
+    Ok(true)
+}
