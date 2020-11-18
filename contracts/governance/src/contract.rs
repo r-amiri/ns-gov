@@ -212,4 +212,50 @@ mod tests {
         let query = get_nameservice_address(&deps).unwrap();
         assert_eq!(query, base_address);
     }
+
+    #[test]
+    fn proper_subscription() {
+        let mut deps = mock_dependencies(20, &[]);
+        let sent = Coin::new(1000, LUNA);
+        let base_address = HumanAddr::from("test1");
+        let env = mock_env(base_address.clone(), &[sent]);
+
+        let msg1 = InitMsg {
+            nameservice_code_id: 16,
+        };
+        let _res1 = init(&mut deps, env.clone(), msg1);
+
+        let msg2 = Signup {};
+        let _res2 = handle(&mut deps, env.clone(), msg2);
+
+        let msg3 = Subscribe {
+            name: "Test1Name".to_string(),
+        };
+        let res3 = handle(&mut deps, env, msg3);
+        assert_eq!(&res3.is_err(), &false);
+        let res3_message = res3.unwrap().messages;
+        assert_eq!(res3_message.len(), 1);
+
+        if res3_message.len() == 1 {
+            let intended_message: Vec<CosmosMsg> = vec![CosmosMsg::Wasm(WasmMsg::Execute {
+                contract_addr: base_address.clone(),
+                msg: to_binary(&Register {
+                    name_c: Name {
+                        value: "Test1Name".to_string(),
+                        owner: deps.api.canonical_address(&base_address).unwrap(),
+                    },
+                })
+                    .unwrap(),
+                send: vec![],
+            })
+                .into()];
+            assert_eq!(intended_message, res3_message);
+        }
+
+        let query1 = address_exists(&deps, base_address.clone()).unwrap();
+        assert_eq!(query1, true);
+
+        let query2 = try_paidamountis(&deps, base_address).unwrap();
+        assert_eq!(query2, Uint128(1000));
+    }
 }
