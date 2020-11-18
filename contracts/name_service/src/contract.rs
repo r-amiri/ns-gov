@@ -115,3 +115,18 @@ pub fn query<S: Storage, A: Api, Q: Querier>(
         QueryMsg::ValueIs { owner } => to_binary(&try_valueis(deps, owner)?),
     }
 }
+
+pub fn try_nameexists<S: Storage, A: Api, Q: Querier>(
+    deps: &Extern<S, A, Q>,
+    value: String,
+) -> StdResult<bool> {
+    let mut found = false;
+    let names_iter = names_read(&deps.storage).load().unwrap().names_vector;
+    for val in names_iter {
+        if val.value == value {
+            found = true;
+            break;
+        }
+    }
+    Ok(found)
+}
